@@ -1,0 +1,135 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 653px;
+  padding: 12px 140px;
+  color: white;
+  z-index: 2;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/Background.png") no-repeat center center/cover;
+  opacity: 0.02;
+  z-index: -1;
+}
+
+.heroText {
+  max-width: 50%;
+}
+
+.heroText h1 {
+  color: #8bac3e;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.heroText p {
+  color: #757575;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.heroAction {
+  display: flex;
+  gap: 16px;
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.heroImageMobile {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  display: none;
+}
+
+.heroImageMobile img {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+/* Media Query untuk Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    margin-top: 100px;
+    padding: 12px 40px;
+  }
+  .heroAction {
+    justify-content: left;
+    margin-bottom: 50px;
+  }
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 100px;
+    flex-direction: column;
+    height: auto;
+    padding: 12px 20px;
+    text-align: left;
+  }
+
+  .heroText {
+    max-width: 100%;
+  }
+
+  .heroText h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .heroText p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .heroAction {
+    justify-content: left;
+    margin-bottom: 50px;
+  }
+
+  .heroImage {
+    margin-top: 40px;
+    justify-content: center;
+    display: none;
+  }
+
+  .heroImageMobile {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    display: block;
+  }
+
+  .heroImageMobile img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

@@ -1,0 +1,44 @@
+/* components/StickyNav.module.css */
+.sticky-nav {
+  position: fixed;
+  bottom: 20px; /* Jarak dari bagian bawah layar */
+  left: 50%; /* Pusatkan secara horizontal */
+  transform: translateX(-50%); /* Geser ke kiri sebesar 50% dari lebarnya */
+  background-color: #ffffff; /* Warna background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Shadow untuk efek melayang */
+  border-radius: 24px; /* Sudut melengkung */
+  display: none; /* Sembunyikan secara default */
+  z-index: 1000;
+  padding: 12px 24px; /* Padding dalam */
+}
+
+.sticky-nav nav {
+  display: flex;
+  justify-content: center; /* Pusatkan item secara horizontal */
+  align-items: center; /* Pusatkan item secara vertikal */
+  gap: 20px; /* Jarak antar item */
+}
+
+.sticky-nav nav a {
+  text-decoration: none;
+  color: #333333; /* Warna teks */
+  font-size: 14px;
+  display: flex;
+  align-items: center; /* Pusatkan ikon */
+  justify-content: center;
+  padding: 8px; /* Padding untuk area klik */
+  border-radius: 50%; /* Bentuk lingkaran */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efek hover */
+}
+
+.sticky-nav nav a:hover {
+  background-color: #8bac3e; /* Warna background saat hover */
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* Tampilkan hanya pada layar mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .sticky-nav {
+    display: block; /* Munculkan saat lebar layar <= 767px */
+  }
+}

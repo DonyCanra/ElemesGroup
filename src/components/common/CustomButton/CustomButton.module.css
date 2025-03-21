@@ -1,0 +1,12 @@
+/* src/components/common/CustomButton/CustomButton.module.css */
+.signup-btn {
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  transform: scale(1.05);
+}

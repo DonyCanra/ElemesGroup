@@ -1,0 +1,120 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffff;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #757575;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.loginBtn {
+  color: black;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.loginBtn:hover {
+  color: #8bac3e;
+  cursor: pointer;
+}
+
+.signupBtn {
+  background-color: #8bac3e;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+
+.signupBtn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+/* Responsif Menu untuk Mobile */
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: background 0.3s;
+    z-index: 1000;
+    background: #fff;
+  }
+  .menu {
+    display: none; /* Sembunyikan menu untuk mobile */
+  }
+
+  .menu.active {
+    display: flex; /* Tampilkan menu saat aktif */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Jarak dari header */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .menu.active a {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .menuToggle {
+    display: flex; /* Tampilkan toggle untuk mobile */
+  }
+}

@@ -1,0 +1,193 @@
+.product {
+  padding: 0 20px; /* Padding lebih kecil untuk mobile */
+  height: auto;
+  text-align: left;
+}
+
+.pageTitle {
+  color: #333333;
+  font-size: 28px; /* Ukuran font lebih kecil untuk mobile */
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.pageTitle h4 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.pageTitle h4 span {
+  color: #8bac3e;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.productItems {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 kolom untuk mobile */
+  gap: 20px;
+  padding: 20px 0;
+  width: 100%;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.trendingItem {
+  padding: 15px; /* Padding lebih kecil untuk mobile */
+  background-color: #f0feeb;
+  border-radius: 17px;
+  text-align: left;
+  font-weight: bold;
+  height: auto; /* Height auto untuk mobile */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  gap: 5px;
+}
+
+.trendingItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.trendingItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(240, 254, 235, 0.8);
+}
+
+.trendingItem:hover::before {
+  opacity: 0.3;
+}
+
+.trendingIcon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.trendingName {
+  font-size: 20px; /* Ukuran font lebih kecil untuk mobile */
+  font-weight: 500;
+  margin: 5px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.trendingCategory {
+  font-size: 16px; /* Ukuran font lebih kecil untuk mobile */
+  color: #8bac3e;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.ratingStars {
+  display: flex;
+  gap: 4px;
+  margin-top: 5px;
+  color: #ff8412;
+  font-size: 14px;
+}
+
+.seeAllButton {
+  background-color: #8bac3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.seeAllButton:hover {
+  background-color: #6d8c2e;
+}
+
+/* Media Query untuk Tablet */
+@media (min-width: 768px) {
+  .product {
+    padding: 0 40px; /* Padding lebih besar untuk tablet */
+  }
+
+  .pageTitle {
+    font-size: 32px; /* Ukuran font lebih besar untuk tablet */
+  }
+
+  .productItems {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
+  }
+
+  .trendingItem {
+    padding: 20px; /* Padding lebih besar untuk tablet */
+    height: 300px; /* Height tetap untuk tablet */
+  }
+
+  .trendingName {
+    font-size: 24px; /* Ukuran font lebih besar untuk tablet */
+  }
+
+  .trendingCategory {
+    font-size: 18px; /* Ukuran font lebih besar untuk tablet */
+  }
+}
+
+/* Media Query untuk Desktop */
+@media (min-width: 1024px) {
+  .product {
+    padding: 0 140px; /* Padding default untuk desktop */
+  }
+
+  .pageTitle {
+    font-size: 38px; /* Ukuran font default untuk desktop */
+  }
+
+  .productItems {
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom untuk desktop */
+  }
+
+  .trendingItem {
+    padding: 20px; /* Padding default untuk desktop */
+    height: 300px; /* Height default untuk desktop */
+  }
+
+  .trendingName {
+    font-size: 26px; /* Ukuran font default untuk desktop */
+  }
+
+  .trendingCategory {
+    font-size: 18px; /* Ukuran font default untuk desktop */
+  }
+}
